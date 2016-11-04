@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './styles.module.css';
 import "./app.css";
+import "font-awesome/css/font-awesome.css";
 
 const App = React.createClass({
   render () {
@@ -9,6 +10,7 @@ const App = React.createClass({
       <div className={styles.wrapper}>
         <h1>Hello World!</h1>
         <p>You are in {__NODE_ENV__} environment</p>
+        <i className="fa fa-star"></i>
       </div>
     )
   }
