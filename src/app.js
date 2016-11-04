@@ -6,7 +6,10 @@ import "./app.css";
 const App = React.createClass({
   render () {
     return (
-      <div className={styles.wrapper}>Hello World!</div>
+      <div className={styles.wrapper}>
+        <h1>Hello World!</h1>
+        <p>You are in {__NODE_ENV__} environment</p>
+      </div>
     )
   }
 })
