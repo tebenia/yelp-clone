@@ -1,6 +1,7 @@
 // Karma configuration
 // Generated on Sat Nov 05 2016 07:28:26 GMT+0700 (WIB)
 var webpackConfig = require("./webpack.config");
+var argv = require('yargs').argv;
 
 module.exports = function(config) {
   config.set({
@@ -16,7 +17,6 @@ module.exports = function(config) {
     webpackServer: {
       noInfo: true
     },
-
     // list of files / patterns to load in the browser
     files: [
       "tests.webpack.js"
@@ -77,6 +77,8 @@ module.exports = function(config) {
       "karma-phantomjs-launcher",
       "karma-spec-reporter",
       "karma-sourcemap-loader"
-    ]
+    ],
+    singleRun: !argv.watch
+
   })
 }
